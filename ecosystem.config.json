@@ -6,9 +6,8 @@
       "watch": false,
       "ignore_watch": ["node_modules", "logs", "bot_sessions"],
       "max_memory_restart": "1000M",
-      "exec_mode": "cluster",
+      "exec_mode": "fork",
       "instances": 1,
-      "cron_restart": "59 23 * * *",
       "interpreter": "node",
       "env": {
         "NODE_ENV": "development"
