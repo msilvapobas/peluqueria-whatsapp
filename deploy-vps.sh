@@ -6,7 +6,7 @@
 set -e  # Salir si hay cualquier error
 
 # Configuración
-REPO_URL="https://github.com/TU_USUARIO/peluqueria-whatsapp.git"
+REPO_URL="https://github.com/msilvapobas/peluqueria-whatsapp.git"
 APP_DIR="/home/ubuntu/peluqueria-whatsapp"
 APP_NAME="app-sebaarevalo-wapp"
 
