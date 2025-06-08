@@ -1,0 +1,57 @@
+🎯 INSTRUCCIONES SÚPER SIMPLES PARA TU VPS
+
+==============================================
+PASO 1: CONECTAR A TU VPS
+==============================================
+
+En tu PowerShell de Windows, escribe:
+ssh -p5661 root@149.50.144.227
+
+(Te pedirá la contraseña del servidor)
+
+==============================================
+PASO 2: UNA VEZ CONECTADO
+==============================================
+
+Ahora estás DENTRO del servidor Linux.
+Copia y pega TODOS estos comandos DE UNA VEZ:
+
+apt update && apt install -y curl git
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+apt-get install -y nodejs
+npm install -g pm2
+cd /root
+git clone https://github.com/msilvapobas/peluqueria-whatsapp.git
+cd peluqueria-whatsapp
+npm install
+cp .env.production .env
+nano .env
+
+==============================================
+PASO 3: CONFIGURAR TU TOKEN
+==============================================
+
+Cuando se abra el editor nano:
+1. Busca la línea: AUTH_TOKEN=production-token-change-me
+2. Cámbiala por: AUTH_TOKEN=tu-token-secreto-123
+3. Presiona Ctrl+X, luego Y, luego Enter
+
+==============================================
+PASO 4: INICIAR TU BOT
+==============================================
+
+pm2 start ecosystem.config.json --env production
+pm2 startup systemd -u root --hp /root
+pm2 save
+pm2 status
+
+==============================================
+¡LISTO! TU BOT ESTÁ FUNCIONANDO
+==============================================
+
+Comandos útiles:
+- pm2 status          (ver estado)
+- pm2 logs app-sebaarevalo-wapp    (ver mensajes)
+- pm2 restart app-sebaarevalo-wapp (reiniciar)
+
+Para salir del servidor: exit
