@@ -1,0 +1,33 @@
+{
+  "apps": [
+    {
+      "name": "app-sebaarevalo-wapp",
+      "script": "app.js",
+      "watch": false,
+      "ignore_watch": ["node_modules", "logs", "bot_sessions"],
+      "max_memory_restart": "1000M",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "cron_restart": "59 23 * * *",
+      "interpreter": "node",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      },
+      "output": "./logs/out.log",
+      "error": "./logs/error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "error_file": "./logs/err.log",
+      "out_file": "./logs/out.log",
+      "log_file": "./logs/combined.log",
+      "time": true,
+      "max_restarts": 10,
+      "min_uptime": "10s",
+      "restart_delay": 4000,
+      "autorestart": true,
+      "kill_timeout": 5000
+    }
+  ]
+}

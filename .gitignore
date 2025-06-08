@@ -1,0 +1,35 @@
+# Archivos de variables de entorno
+.env
+.env.local
+
+# NOTA: .env.development y .env.production SÍ se suben al repo como templates
+
+# Dependencias
+node_modules/
+
+# Logs
+*.log
+baileys.log
+core.class.log
+queue.class.log
+logs/
+
+# Archivos de sesión de WhatsApp
+bot_sessions/
+bot.qr.png
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de certificados SSL (si los tienes localmente)
+*.pem
+*.key
+*.crt
+
+# Archivos temporales
+tmp/
+temp/
+
+# PM2 logs y procesos
+.pm2/
