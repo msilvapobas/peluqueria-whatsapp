@@ -23,9 +23,9 @@ Write-Host "📋 Pasos para hacer deployment:" -ForegroundColor Cyan
 
 Show-Command "1. Subir código a GitHub:" "git add . && git commit -m 'Update bot' && git push origin main"
 
-Show-Command "2. Conectar a tu VPS:" "ssh usuario@tu-vps-ip"
+Show-Command "2. Conectar a tu VPS:" "ssh -p5661 root@149.50.144.227"
 
-Show-Command "3. Primer deployment:" "wget https://raw.githubusercontent.com/TU_USUARIO/peluqueria-whatsapp/main/deploy-vps.sh && chmod +x deploy-vps.sh && ./deploy-vps.sh"
+Show-Command "3. Primer deployment:" "wget https://raw.githubusercontent.com/msilvapobas/peluqueria-whatsapp/main/deploy-vps.sh && chmod +x deploy-vps.sh && ./deploy-vps.sh"
 
 Show-Command "4. Actualizaciones futuras:" "./deploy-vps.sh"
 

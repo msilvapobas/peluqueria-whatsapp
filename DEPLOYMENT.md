@@ -45,8 +45,8 @@ git init
 git add .
 git commit -m "Initial commit: WhatsApp bot setup"
 
-# Crear repo en GitHub y subir
-git remote add origin https://github.com/TU_USUARIO/peluqueria-whatsapp.git
+# Crear repo en GitHub y subir (ya configurado)
+git remote add origin https://github.com/msilvapobas/peluqueria-whatsapp.git
 git branch -M main
 git push -u origin main
 ```
@@ -57,12 +57,10 @@ git push -u origin main
 ssh usuario@tu-vps-ip
 
 # Descargar y ejecutar script de deployment
-wget https://raw.githubusercontent.com/TU_USUARIO/peluqueria-whatsapp/main/deploy-vps.sh
+wget https://raw.githubusercontent.com/msilvapobas/peluqueria-whatsapp/main/deploy-vps.sh
 chmod +x deploy-vps.sh
 
-# Editar el script con tu URL de repo
-nano deploy-vps.sh
-# Cambiar: REPO_URL="https://github.com/TU_USUARIO/peluqueria-whatsapp.git"
+# El script ya está configurado con la URL correcta del repositorio
 
 # Ejecutar deployment
 ./deploy-vps.sh
