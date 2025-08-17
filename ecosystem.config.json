@@ -4,11 +4,11 @@
       "name": "app-sebaarevalo-wapp",
       "script": "app.js",
       "watch": false,
-      "ignore_watch": ["node_modules", "logs", "bot_sessions"],
-      "max_memory_restart": "1000M",
-      "exec_mode": "fork",
+      "ignore_watch": ["node_modules", "logs", "bot_sessions"],      "max_memory_restart": "1000M",
+      "exec_mode": "cluster",
       "instances": 1,
       "interpreter": "node",
+      "cron_restart": "59 23 * * *",
       "env": {
         "NODE_ENV": "development"
       },
